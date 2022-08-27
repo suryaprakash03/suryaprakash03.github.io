@@ -20,52 +20,72 @@
     }
     .heading
     {
-        background-color:blue;
+        background-color:black;
+        color:white;
         position:fixed;
         top:0px;
         width:100%;
         display:flex;
-        justify-content:center;
+        flex-direction:column;
+        align-items:center;
     }
     a
     {
         text-decoration:none;
-        padding:1%;
-        color:blue;
-        background-color:white;
+        padding:10%;
+        color:white;
+        background-color:black;
+        font-style:italic;
+        font-weight:bold;
     }
     a:hover
     {
-        color:white;
-        background-color:blue;
+        text-decoration:underline;
     }
     .myself
     {
        padding-top:10%;
        min-height:100%;
+       color:white;
+       background-color:black;
       
     }
     .myskills
     {
        min-height:100%;
        padding-top:10%;
+       color:white;
+       background-color:black;
     }
     .contact
     {
        min-height:100%;
        padding-top:10%;
+       color:white;
+       background-color:black;
+    }
+    .link
+    {
+        display:flex;
+        justify-content:center;
     }
 </style>
 <body>
     <div class="heading">
+        <h1 style="font-style:italic;">A Warm Welcome to my Portfolio Site</h1>
+        <div class="link">
         <a href="#my">Myself</a>
         <a href="#ms">Myskills</a>
         <a href="#c">Contact</a>
+        <img style="margin-top:15px;" src="moon.png" height="30px" onclick="change()">
+        <span id="imgthe" style="color:white; margin-top:23px; margin-left:10px; font-style:italic;
+        font-weight:bold;">Dark</span>
+    </div>
     </div>
 
     <div class="myself" id="my">
      <h1>Surya prakash P</h1>
-     <p>A Warm Welcome to my portfolio site,Myself surya prakash p a new arrival to the web development field.Has the desire to create usefull and efficient site that will definitely inspire others.</p>
+     <p>Hello friends,Myself surya prakash a new arrival to the web development field.Has the desire to create usefull and efficient site that will definitely inspire others.</p>
     </div>
 
     <div class="myskills" id="ms">
@@ -97,4 +117,68 @@
      </ul>
     </div>
 </body>
+<script>
+    var img=0;
+    var bg=0;
+    function background()
+    {
+        if(bg==0)
+        {
+
+            document.querySelectorAll('a')[0].style.color="black";
+            document.querySelectorAll('a')[0].style.background="white";
+            document.querySelectorAll('a')[1].style.color="black";
+            document.querySelectorAll('a')[1].style.background="white";
+            document.querySelectorAll('a')[2].style.color="black";
+            document.querySelectorAll('a')[2].style.background="white";
+            document.getElementById("imgthe").style.color="black";
+            document.getElementsByClassName("heading")[0].style.color="black";
+            document.getElementsByClassName("heading")[0].style.background="white";
+            document.getElementsByClassName("myself")[0].style.color="black";
+            document.getElementsByClassName("myself")[0].style.background="white";
+            document.getElementsByClassName("myskills")[0].style.color="black";
+            document.getElementsByClassName("myskills")[0].style.background="white";
+            document.getElementsByClassName("contact")[0].style.color="black";
+            document.getElementsByClassName("contact")[0].style.background="white";
+            bg=1;
+        }
+        else
+        {
+            document.querySelectorAll('a')[0].style.color="white";
+            document.querySelectorAll('a')[0].style.background="black";
+            document.querySelectorAll('a')[1].style.color="white";
+            document.querySelectorAll('a')[1].style.background="black";
+            document.querySelectorAll('a')[2].style.color="white";
+            document.querySelectorAll('a')[2].style.background="black";
+            document.getElementById("imgthe").style.color="white";
+            document.getElementsByClassName("heading")[0].style.color="white";
+            document.getElementsByClassName("heading")[0].style.background="black";
+            document.getElementsByClassName("myself")[0].style.color="white";
+            document.getElementsByClassName("myself")[0].style.background="black";
+            document.getElementsByClassName("myskills")[0].style.color="white";
+            document.getElementsByClassName("myskills")[0].style.background="black";
+            document.getElementsByClassName("contact")[0].style.color="white";
+            document.getElementsByClassName("contact")[0].style.background="black";
+            bg=0;
+
+        }
+    
+    }
+    function change()
+    {
+        background();
+        if(img)
+        {
+            document.querySelector('img').src="moon.png";
+            document.getElementById("imgthe").innerText="Dark";
+            img=0;
+        }
+        else
+        {
+            document.querySelector('img').src="sun-16.png";
+            document.getElementById("imgthe").innerText="Bright";
+            img=1;
+        }
+    }
+</script>
 </html>
