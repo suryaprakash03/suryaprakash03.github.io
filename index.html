@@ -7,16 +7,20 @@
     <title>clock</title>
 </head>
 <style>
-    body,html
+    body
     {
         height:100%;
         width:100%;
-        margin:0;
+        margin:0px;
+        display:flex;
+        flex-direction:column;
     }
-    body
+    #outer
     {
         display:flex;
         flex-direction:column;
+        height:100%;
+        width:100%;
     }
     .heading
     {
@@ -32,8 +36,8 @@
     a
     {
         text-decoration:none;
-        padding:10%;
         color:white;
+        margin-right:5%;
         background-color:black;
         font-style:italic;
         font-weight:bold;
@@ -45,21 +49,21 @@
     .myself
     {
        padding-top:10%;
-       min-height:100%;
+       min-height:100vh;
        color:white;
        background-color:black;
       
     }
     .myskills
     {
-       min-height:100%;
+       min-height:100vh;
        padding-top:10%;
        color:white;
        background-color:black;
     }
     .contact
     {
-       min-height:100%;
+       min-height:100vh;
        padding-top:10%;
        color:white;
        background-color:black;
@@ -69,6 +73,13 @@
         display:flex;
         justify-content:center;
     }
+    @media only screen and (max-width:850px)
+    {
+       .heading
+       {
+         max-height:10%;
+       }
+    }
 </style>
 <body>
     <div class="heading">
@@ -77,12 +88,12 @@
         <a href="#my">Myself</a>
         <a href="#ms">Myskills</a>
         <a href="#c">Contact</a>
-        <img style="margin-top:15px;" src="moon.png" height="30px" onclick="change()">
-        <span id="imgthe" style="color:white; margin-top:23px; margin-left:10px; font-style:italic;
+        <img src="moon.jpg" height="30px" onclick="change()">
+        <span id="imgthe" style="color:white; font-style:italic;
         font-weight:bold;">Dark</span>
     </div>
     </div>
-
+    <div id="outer">
     <div class="myself" id="my">
      <h1>Surya prakash P</h1>
      <p>Hello friends,Myself surya prakash a new arrival to the web development field.Has the desire to create usefull and efficient site that will definitely inspire others.</p>
@@ -115,6 +126,7 @@
         <li>Email id:suryanarmatha03@gmail.com</li>
         <li>Location:Erode,Tamil Nadu</li>
      </ul>
+    </div>
     </div>
 </body>
 <script>
@@ -169,16 +181,45 @@
         background();
         if(img)
         {
-            document.querySelector('img').src="moon.png";
+            document.querySelector('img').src="moon.jpg";
             document.getElementById("imgthe").innerText="Dark";
             img=0;
         }
         else
         {
-            document.querySelector('img').src="sun-16.png";
+            document.querySelector('img').src="sun1.jpg";
             document.getElementById("imgthe").innerText="Bright";
             img=1;
         }
     }
 </script>
+
+<!--<style>
+    body
+    {
+        display:flex;
+        flex-direction:column;
+        width:100%;
+    }
+    #one
+    {
+        background-color:red;
+        width:100%;
+    }
+    #two
+    {
+        background-color:blue;
+        width:100%;
+    }
+    #zero
+    {
+        background-color:green;
+        width:100%;
+    }
+</style>
+<body>
+    <div id="zero">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint labore vero reiciendis ad sunt nihil, consequatur magnam dolores tempore excepturi voluptatibus repellat inventore sed quo sequi? Iusto ad impedit, nulla accusantium commodi omnis adipisci ea itaque maiores sed libero magnam optio alias vel ipsum quae sapiente perspiciatis. Molestiae labore exercitationem est inventore, atque voluptate odio perspiciatis impedit ipsa sed officia numquam alias, odit doloribus vitae nemo maxime nulla architecto. Expedita suscipit cupiditate error ad. Rerum ut necessitatibus explicabo voluptas error officia quo cum dolorum, nisi harum iste libero voluptates excepturi recusandae mollitia temporibus inventore assumenda eveniet quisquam suscipit! Officiis, suscipit.</div>
+    <div id="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint labore vero reiciendis ad sunt nihil, consequatur magnam dolores tempore excepturi voluptatibus repellat inventore sed quo sequi? Iusto ad impedit, nulla accusantium commodi omnis adipisci ea itaque maiores sed libero magnam optio alias vel ipsum quae sapiente perspiciatis. Molestiae labore exercitationem est inventore, atque voluptate odio perspiciatis impedit ipsa sed officia numquam alias, odit doloribus vitae nemo maxime nulla architecto. Expedita suscipit cupiditate error ad. Rerum ut necessitatibus explicabo voluptas error officia quo cum dolorum, nisi harum iste libero voluptates excepturi recusandae mollitia temporibus inventore assumenda eveniet quisquam suscipit! Officiis, suscipit.</div>
+    <div id="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint labore vero reiciendis ad sunt nihil, consequatur magnam dolores tempore excepturi voluptatibus repellat inventore sed quo sequi? Iusto ad impedit, nulla accusantium commodi omnis adipisci ea itaque maiores sed libero magnam optio alias vel ipsum quae sapiente perspiciatis. Molestiae labore exercitationem est inventore, atque voluptate odio perspiciatis impedit ipsa sed officia numquam alias, odit doloribus vitae nemo maxime nulla architecto. Expedita suscipit cupiditate error ad. Rerum ut necessitatibus explicabo voluptas error officia quo cum dolorum, nisi harum iste libero voluptates excepturi recusandae mollitia temporibus inventore assumenda eveniet quisquam suscipit! Officiis, suscipit.</div>
+</body>-->
 </html>
