@@ -2,206 +2,143 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Site</title>
-</head>
-<style>
-    body
-    {
-        height:100%;
-        width:100%;
-        margin:0px;
-        display:flex;
-        flex-direction:column;
-    }
-    #outer
-    {
-        display:flex;
-        flex-direction:column;
-        height:100%;
-        width:100%;
-    }
-    .heading
-    {
-        background-color:black;
-        color:white;
-        position:fixed;
-        top:0px;
-        width:100%;
-        display:flex;
-        flex-direction:column;
-        align-items:center;
-    }
-    a
-    {
-        text-decoration:none;
-        color:white;
-        margin-right:5%;
-        background-color:black;
-        font-style:italic;
-        font-weight:bold;
-    }
-    a:hover
-    {
-        text-decoration:underline;
-    }
-    .myself
-    {
-       padding-top:15%;
-       min-height:100vh;
-       color:white;
-       background-color:black;
-      
-    }
-    .myskills
-    {
-       min-height:100vh;
-       padding-top:15%;
-       color:white;
-       background-color:black;
-    }
-    .contact
-    {
-       min-height:100vh;
-       padding-top:15%;
-       color:white;
-       background-color:black;
-    }
-    .link
-    {
-        display:flex;
-        justify-content:center;
-    }
-    @media only screen and (max-width:850px)
-    {
-       .heading
-       {
-         max-height:10%;
-       }
-        #outer
+    <title>Resume</title>
+    <style>
+        @media only screen and (max-width:430px)
         {
-            margin-top:20%;
+          body
+          {
+            font-size:50%;
+          }
+          img 
+          {
+            width:200%;
+          }
         }
-    }
-</style>
+        .container
+        {
+            display:grid;
+            grid-template-columns:30% 70%;
+            grid-template-rows:350px 200px 50px;
+            grid-gap:0.5%;
+            padding:1%;
+            border:2px solid black;
+        }
+        #myprofile
+        {
+            background-color:lightcyan;
+            grid-row:1/span 2;
+            border:2px solid black;
+        }
+        #workexp
+        {
+            background-color:lightcyan;
+            border:2px solid black;
+        }
+        #education
+        {
+            background-color:lightcyan;
+            border:2px solid black;
+        }
+        #footer
+        {
+            background-color:lightcyan;
+            grid-column:1/span 2;
+        }
+        img
+        {
+            width:30%;
+            height:20%;
+        }
+        p
+        {
+            font-style:bold;
+            text-transform:capitalize;
+        }
+        i
+        {
+            margin:0 1%;
+        }
+        ::marker
+        {
+            color:blue;
+        }
+        ul li
+        {
+            list-style-type:square; 
+        }
+        h3
+        {
+            margin:0px;
+            text-decoration:underline blue 2px;
+        }
+        .im
+        {
+            color:blue;
+        }
+        #footer
+        {
+            border:2px solid black;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/f6f9c7815a.js" crossorigin="anonymous"></script>
+</head>   
 <body>
-    <div class="heading">
-        <h1 style="font-style:italic;">A Warm Welcome to my Portfolio Site</h1>
-        <div class="link">
-        <a href="#my">Myself</a>
-        <a href="#ms">Myskills</a>
-        <a href="#c">Contact</a>
-        <img src="moon.jpg" height="30px" onclick="change()">
-        <span id="imgthe" style="color:white; font-style:italic;
-        font-weight:bold;">Dark</span>
-    </div>
-    </div>
-    <div id="outer">
-    <div class="myself" id="my">
-    <p>Hello friends,Myself <b>Surya Prakash P</b>.Having the desire to create usefull and efficient site that will definitely 
-    <i>Inspire Others</i>.</p>
-    </div>
-
-    <div class="myskills" id="ms">
-    <h1>My Skills are</h1>
-    <ul>
-    <li>HTML</li>
-    <li>CSS</li>
-    <li>JAVASCRIPT</li>
-    <li>BOOTSTRAP</li>
-    <li>ANGULAR</li>
-    <li>NODE JS</li>
-    <li>EXPRESS JS</li>
-    <li>MONGODB</li>
-    <li>MULESOFT</li>
-    <li>DELL BOOMI</li>
-    </ul>
-    <h1>My Projects</h1>
-    <ol>
-        <li>Digital Restaurant app using ANGULAR(Complted)</li>
-        <li>HTML form that uses mongoDB to store the input data</li>
-        <li>Garden App using ANGULAR(Ongoing)</li>
-    </ol>
-        <h1>Certifications</h1>
-        <ol>
-            <a href="https://university.mongodb.com/course_completion/f06a01ca-c601-4885-a9bb-2e465c74b69c" target="_blank">MongoDB</a>
-            <a href="https://www.hackerrank.com/certificates/117b9804d1d3" target="_blank">Javascript</a>
-         </ol>
-    </div>
-
-    <div class="contact" id="c">
-    <h1>Contact</h1>
-     <ul>
-        <li>Name:surya prakash P</li>
-        <li>Email id:suryanarmatha03@gmail.com</li>
-        <li>Location:Erode,Tamil Nadu</li>
-     </ul>
-    </div>
-    </div>
+    <div class="container">
+        <div id="myprofile">
+           <img src="suryaophoto.jpeg">
+           <p><i class="fa-solid fa-user"></i>surya prakash palanisamy</p>
+           <div><i class="fa-solid fa-envelope"></i>suryanarmatha03@gmail.com</div>
+           <p><i class="fa-solid fa-phone"></i>7904211765</p>
+           <div style="font-style:bold;"><i class="fa-solid fa-house"></i>14/79 East Street,
+            Ingur Perundurai,
+            Erode Ph-638052</div>
+            <hr>
+            <p>Skills:</p>
+            <ul>
+                <li>HTML,CSS,JS</li>
+                <li>Angular</li>
+                <li>MongoDB</li>
+                <li>Mulesoft</li>
+                <li>Dell Boomi</li>
+                <li>Java</li>
+                <li>Python</li>
+            </ul>
+            <p>Languages:</p>
+            <ul>
+                <li>English</li>
+                <li>Tamil</li>
+            </ul>
+        </div>
+        <div id="workexp">
+        <h3>Work Experience:</h3>
+        <ul>
+            <h4 class="im" style="margin-bottom:1%;">LTIMindtree</h4>
+            <li>Completed a Three months Internship in <span class="im">Mindtree</span> on the topic of <span class="im">MEAN</span> stack and developed a Digital Restaurant app</li>
+            <li>Having <span class="im">1.6</span> years of Experience in LTIMindtree as Software Engineer</li>
+            <li>Completed <span class="im">Mulesoft Level 1</span> and Dell Boomi certificates.</li>
+            <li>Worked on the front end part using Angular,Typescript,Html and Css(Sass).Able to connect the backend using nodejs and expressjs.</li>
+            <li>Perform CRUD operation using MongoDB(NoSql Database).</li>
+            <li><span class="im">Angular</span> Component creation,Routing,Dependency injection</li>
+            <li>Having done projects on mulesoft Anypoint studio and Design API using RAML in Design center</li>
+            <li>Able to write dataweave language.Perform CRUD operation in Database,transforming the payload type(for eg:xml to json),jms,watermarking,vm queues,Munit testing</li>
+            <li>Having good knowledge in Angular and web technology.
+            </li>
+        </ul>
+        </div>
+        <div id="education">
+        <h3>Education:</h3>
+        <ul>
+            <li>Bachelor of Engineering (2018-2022) in Mechanical Engineering from Sri Krishna College of Engineering and Technology, Coimbatore, with 8.9 CGPA</li>
+            <li>HSC (2017-2018) from Shri Ganga Higher Secondary School, Ingur,with 87.5%</li>
+            <li>SSLC (2015-2016) from Kongu Vellalar Matriculation HigherSecondary School, Perundurai, with 93.6%</li>
+        </ul>
+        </div>
+        <div id="footer">
+            <p>My Linkedin Profile:<a href="https://www.linkedin.com/in/surya-prakash-p-05a492175?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Profile</a>
+            </p>
+        </div>
+    </div> 
 </body>
-<script>
-    var img=0;
-    var bg=0;
-    function background()
-    {
-        if(bg==0)
-        {
-
-            document.querySelectorAll('a')[0].style.color="black";
-            document.querySelectorAll('a')[0].style.background="white";
-            document.querySelectorAll('a')[1].style.color="black";
-            document.querySelectorAll('a')[1].style.background="white";
-            document.querySelectorAll('a')[2].style.color="black";
-            document.querySelectorAll('a')[2].style.background="white";
-            document.getElementById("imgthe").style.color="black";
-            document.getElementsByClassName("heading")[0].style.color="black";
-            document.getElementsByClassName("heading")[0].style.background="white";
-            document.getElementsByClassName("myself")[0].style.color="black";
-            document.getElementsByClassName("myself")[0].style.background="white";
-            document.getElementsByClassName("myskills")[0].style.color="black";
-            document.getElementsByClassName("myskills")[0].style.background="white";
-            document.getElementsByClassName("contact")[0].style.color="black";
-            document.getElementsByClassName("contact")[0].style.background="white";
-            bg=1;
-        }
-        else
-        {
-            document.querySelectorAll('a')[0].style.color="white";
-            document.querySelectorAll('a')[0].style.background="black";
-            document.querySelectorAll('a')[1].style.color="white";
-            document.querySelectorAll('a')[1].style.background="black";
-            document.querySelectorAll('a')[2].style.color="white";
-            document.querySelectorAll('a')[2].style.background="black";
-            document.getElementById("imgthe").style.color="white";
-            document.getElementsByClassName("heading")[0].style.color="white";
-            document.getElementsByClassName("heading")[0].style.background="black";
-            document.getElementsByClassName("myself")[0].style.color="white";
-            document.getElementsByClassName("myself")[0].style.background="black";
-            document.getElementsByClassName("myskills")[0].style.color="white";
-            document.getElementsByClassName("myskills")[0].style.background="black";
-            document.getElementsByClassName("contact")[0].style.color="white";
-            document.getElementsByClassName("contact")[0].style.background="black";
-            bg=0;
-
-        }
-    
-    }
-    function change()
-    {
-        background();
-        if(img)
-        {
-            document.querySelector('img').src="moon.jpg";
-            document.getElementById("imgthe").innerText="Dark";
-            img=0;
-        }
-        else
-        {
-            document.querySelector('img').src="sun1.jpg";
-            document.getElementById("imgthe").innerText="Bright";
-            img=1;
-        }
-    }
-</script>
 </html>
