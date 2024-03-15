@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <style>
+        :root
+        {
+            --w:30%;
+            --h:var(--w)-5%;
+        }
         @media only screen and (max-width:1100px)
         {
           body
           {
-            font-size:75%;
+            font-size:90%;
           }
         }
         @media only screen and (max-width:800px)
         {
           body
           {
-            font-size:50%;
+            font-size:80%;
           }
         }
         body,html
@@ -43,7 +48,7 @@
         #myprofile
         {
             background-color:lightcyan;
-            grid-row:1/span 2;
+            grid-row:1/span 3;
             border:2px solid black;
             border-radius:2%;
         }
@@ -62,7 +67,6 @@
         #footer
         {
             background-color:lightcyan;
-            grid-column:1/span 2;
             border-radius:2%;
         }
         p
@@ -102,8 +106,11 @@
         }
         #photo
         {
+            margin:0px;
             margin-left:5%;
             border:1px solid black;
+            width:var(--w);
+            height:var(--h);
         }
     </style>
     <script src="https://kit.fontawesome.com/f6f9c7815a.js" crossorigin="anonymous"></script>
@@ -111,8 +118,7 @@
 <body>
     <div class="container">
         <div id="myprofile">
-           <p id ="photo" style="width:30%; height:25%; background-image:url(suryaophoto.jpeg); background-repeat: no-repeat; background-size:cover; background-position:center;"></p>
-
+           <img id="photo" src="suryaophoto.jpeg">
            <p><i class="fa-solid fa-user"></i>surya prakash palanisamy</p>
 
            <p style="text-decoration:none; text-transform:none;"><i class="fa-solid fa-envelope"></i>suryanarmatha03@gmail.com</p>
@@ -122,8 +128,6 @@
            <p><i class="fa-solid fa-house"></i>14/79 East Street,
             Ingur Perundurai,
             Erode Pc-638052</p>
-
-            <hr>
             <h3>Skills:</h3>
             <ul>
                 <li>HTML,CSS,JS</li>
