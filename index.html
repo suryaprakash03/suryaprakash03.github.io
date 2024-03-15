@@ -11,16 +11,12 @@
           {
             font-size:75%;
           }
-          img 
-          {
-            width:200%;
-          }
         }
-         @media only screen and (max-width:800px)
+        @media only screen and (max-width:800px)
         {
           body
           {
-            font-size:60%;
+            font-size:50%;
           }
         }
         body,html
@@ -31,12 +27,13 @@
         body
         {
             margin:0px;
+            font-family:sans-serif;
         }
         .container
         {
             display:grid;
             grid-template-columns:30% 70%;
-            grid-template-rows:350px 200px 50px;
+            grid-template-rows:60% 30% 10%;
             grid-gap:0.5%;
             padding:1%;
             border:2px solid black;
@@ -48,35 +45,34 @@
             background-color:lightcyan;
             grid-row:1/span 2;
             border:2px solid black;
+            border-radius:2%;
         }
         #workexp
         {
             background-color:lightcyan;
             border:2px solid black;
+            border-radius:2%;
         }
         #education
         {
             background-color:lightcyan;
             border:2px solid black;
+            border-radius:2%;
         }
         #footer
         {
             background-color:lightcyan;
             grid-column:1/span 2;
-        }
-        img
-        {
-            width:30%;
-            height:20%;
+            border-radius:2%;
         }
         p
         {
-            font-style:bold;
+            font-weight:bold;
             text-transform:capitalize;
         }
         i
         {
-            margin:0 1%;
+            margin:0 2%;
         }
         ::marker
         {
@@ -90,14 +86,24 @@
         {
             margin:0px;
             text-decoration:underline blue 2px;
+            margin-left:1%;
         }
         .im
         {
             color:blue;
         }
+        .im:hover
+        {
+            color:red;
+        }
         #footer
         {
             border:2px solid black;
+        }
+        #photo
+        {
+            margin-left:5%;
+            border:1px solid black;
         }
     </style>
     <script src="https://kit.fontawesome.com/f6f9c7815a.js" crossorigin="anonymous"></script>
@@ -105,15 +111,20 @@
 <body>
     <div class="container">
         <div id="myprofile">
-           <img src="./suryaophoto.jpeg">
+           <p id ="photo" style="width:30%; height:25%; background-image:url(suryaophoto.jpeg); background-repeat: no-repeat; background-size:cover; background-position:center;"></p>
+
            <p><i class="fa-solid fa-user"></i>surya prakash palanisamy</p>
-           <div><i class="fa-solid fa-envelope"></i>suryanarmatha03@gmail.com</div>
+
+           <p style="text-decoration:none; text-transform:none;"><i class="fa-solid fa-envelope"></i>suryanarmatha03@gmail.com</p>
+
            <p><i class="fa-solid fa-phone"></i>7904211765</p>
-           <div style="font-style:bold;"><i class="fa-solid fa-house"></i>14/79 East Street,
+
+           <p><i class="fa-solid fa-house"></i>14/79 East Street,
             Ingur Perundurai,
-            Erode Ph-638052</div>
+            Erode Pc-638052</p>
+
             <hr>
-            <p>Skills:</p>
+            <h3>Skills:</h3>
             <ul>
                 <li>HTML,CSS,JS</li>
                 <li>Angular</li>
@@ -123,7 +134,7 @@
                 <li>Java</li>
                 <li>Python</li>
             </ul>
-            <p>Languages:</p>
+            <h3>Languages:</h3>
             <ul>
                 <li>English</li>
                 <li>Tamil</li>
@@ -132,13 +143,13 @@
         <div id="workexp">
         <h3>Work Experience:</h3>
         <ul>
-            <h4 class="im" style="margin-bottom:1%;">LTIMindtree</h4>
+            <h4 class="im" id="company" style="margin-bottom:1%; font-size:medium;">LTIMindtree</h4>
+            <li>Having <span class="im" title="1 year 6 months">1.6</span> years of Experience in LTIMindtree as Software Engineer</li>
             <li>Completed a Three months Internship in <span class="im">Mindtree</span> on the topic of <span class="im">MEAN</span> stack and developed a Digital Restaurant app</li>
-            <li>Having <span class="im">1.6</span> years of Experience in LTIMindtree as Software Engineer</li>
-            <li>Completed <span class="im">Mulesoft Level 1</span> and Dell Boomi certificates.</li>
             <li>Worked on the front end part using Angular,Typescript,Html and Css(Sass).Able to connect the backend using nodejs and expressjs.</li>
             <li>Perform CRUD operation using MongoDB(NoSql Database).</li>
-            <li><span class="im">Angular</span> Component creation,Routing,Dependency injection</li>
+            <li>In <span class="im">Angular</span> Component creation,Routing,Dependency injection</li>
+            <li>Completed <span class="im">Mulesoft Level 1</span> and Dell Boomi certificates.</li>
             <li>Having done projects on mulesoft Anypoint studio and Design API using RAML in Design center</li>
             <li>Able to write dataweave language.Perform CRUD operation in Database,transforming the payload type(for eg:xml to json),jms,watermarking,vm queues,Munit testing</li>
             <li>Having good knowledge in Angular and web technology.
@@ -154,8 +165,8 @@
         </ul>
         </div>
         <div id="footer">
-            <p>My Linkedin Profile:<a href="https://www.linkedin.com/in/surya-prakash-p-05a492175?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Profile</a>
-            </p>
+            <h3>My Linkedin Profile:<a href="https://www.linkedin.com/in/surya-prakash-p-05a492175?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Profile</a>
+            </h3>
         </div>
     </div> 
 </body>
