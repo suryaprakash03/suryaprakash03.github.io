@@ -3,189 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+    <title>Projects</title>
     <style>
-        :root
+        h2
         {
-            --w:30%;
-            --h:var(--w)-5%;
-        }
-        @media only screen and (max-width:1100px)
-        {
-          body
-          {
-            font-size:90%;
-          }
-        }
-        @media only screen and (max-width:800px)
-        {
-          body
-          {
-            font-size:80%;
-          }
-        }
-        @media only screen and (max-width:530px)
-        {
-          body
-          {
-            font-size:70%;
-          }
-        }
-        @media only screen and (max-width:415px)
-        {
-          body
-          {
-            font-size:60%;
-          }
-        }
-        body,html
-        {
-            width:100%;
-            height:100%;
-        }
-        body
-        {
-            margin:0px;
-            font-family:sans-serif;
-        }
-        .container
-        {
-            display:grid;
-            grid-template-columns:30% 70%;
-            grid-template-rows:60% 30% 10%;
-            grid-gap:0.5%;
-            padding:1%;
-            border:2px solid black;
-            width:100%;
-            height:100%;
-        }
-        #myprofile
-        {
-            background-color:lightcyan;
-            grid-row:1/span 3;
-            border:2px solid black;
-            border-radius:2%;
-        }
-        #workexp
-        {
-            background-color:lightcyan;
-            border:2px solid black;
-            border-radius:2%;
-        }
-        #education
-        {
-            background-color:lightcyan;
-            border:2px solid black;
-            border-radius:2%;
-        }
-        #footer
-        {
-            background-color:lightcyan;
-            border-radius:2%;
-        }
-        p
-        {
-            font-weight:bold;
-            text-transform:capitalize;
-        }
-        i
-        {
-            margin:0 2%;
-        }
-        ::marker
-        {
-            color:blue;
-        }
-        ul li
-        {
-            list-style-type:square; 
-        }
-        h3
-        {
-            margin:0px;
-            text-decoration:underline blue 2px;
-            margin-left:1%;
-        }
-        .im
-        {
-            color:blue;
-        }
-        .im:hover
-        {
-            color:red;
-        }
-        #footer
-        {
-            border:2px solid black;
-        }
-        #photo
-        {
-            margin:0px;
-            margin-left:5%;
-            border:1px solid black;
-            width:var(--w);
-            height:var(--h);
+             text-align:center;
+             text-decoration:underline;
         }
     </style>
-    <script src="https://kit.fontawesome.com/f6f9c7815a.js" crossorigin="anonymous"></script>
 </head>   
 <body>
-    <div class="container">
-        <div id="myprofile">
-           <img id="photo" src="suryaophoto.jpeg">
-           <p><i class="fa-solid fa-user"></i>surya prakash palanisamy</p>
-
-           <p style="text-decoration:none; text-transform:none;"><i class="fa-solid fa-envelope"></i>suryanarmatha03@gmail.com</p>
-
-           <p><i class="fa-solid fa-phone"></i>7904211765</p>
-
-           <p><i class="fa-solid fa-house"></i>14/79 East Street,
-            Ingur Perundurai,
-            Erode Pc-638052</p>
-            <h3>Skills:</h3>
-            <ul>
-                <li>HTML,CSS,JS</li>
-                <li>Angular</li>
-                <li>MongoDB</li>
-                <li>Mulesoft</li>
-                <li>Dell Boomi</li>
-                <li>Java</li>
-                <li>Python</li>
-            </ul>
-            <h3>Languages:</h3>
-            <ul>
-                <li>English</li>
-                <li>Tamil</li>
-            </ul>
-        </div>
-        <div id="workexp">
-        <h3>Work Experience:</h3>
+    <h2>Surya prakash Projects</h2>
+    <h3>Project name:JS game</h3>
+    <h3>Technology used:html,css,javascript</h3>
+    <video width="500px" height="300px" controls>
+        <source  src="./eggcatch game (1).mp4" type="video/mp4">
+    </video>
+    <div>Learnings:
         <ul>
-            <h4 class="im" id="company" style="margin-bottom:1%; font-size:medium;">LTIMindtree</h4>
-            <li>Having <span class="im" title="1 year 6 months">1.6</span> years of Experience in LTIMindtree as Software Engineer</li>
-            <li>Completed a Three months Internship in <span class="im">Mindtree</span> on the topic of <span class="im">MEAN</span> stack and developed a Digital Restaurant app</li>
-            <li>Worked on the front end part using Angular,Typescript,Html and Css(Sass).Able to connect the backend using nodejs and expressjs.</li>
-            <li>Perform CRUD operation using MongoDB(NoSql Database).</li>
-            <li>In <span class="im">Angular</span> Component creation,Routing,Dependency injection</li>
-            <li>Completed <span class="im">Mulesoft Level 1</span> and Dell Boomi certificates.</li>
-            <li>Having done projects on mulesoft Anypoint studio and Design API using RAML in Design center</li>
-            <li>Able to write dataweave language.Perform CRUD operation in Database,transforming the payload type(for eg:xml to json),jms,watermarking,vm queues,Munit testing</li>
-            <li>Having good knowledge in Angular and web technology.
+            <li>Javascript treats the entire webpage as a graph sheet filled with x and y coordinates</li>
+            <li>Implement the pause and resume function</li>
+            <li>Used setinterval(),css infinite animation for egg falling that matches the time with setinterval().</li>
+            <li>On time increases the animation speed increases by 3 steps.captures the user keystroke left,right arrow keys</li>
+            <li>when the egg and player coordinates matched approximately.the user gets points.On leaving point loss.while leaving 3 points ends the game</li>
+        </ul>
+    </div>
+    <hr>
+    <hr>
+    <h3>Project name:Food ordering App</h3>
+    <h3>Technology used:html,css,typescript,Mongodb,Angular,Expressjs,Nodejs</h3>
+    <video width="500px" height="300px" controls>
+        <source  src="./digitalrestaurantapp.mp4" type="video/mp4">
+    </video>
+    <div>Learnings:
+        <ul>
+            <li>Developed during the three months internship in mindtree</li>
+            <li>Used component creation,interpolation{{}},eventbinding,two way databinding[(ngform)],routing,pipes(formatting strings),structural directives(ngif.ngfor)</li>
+            <li>Connect the Mongodb database and perform the CRUD operations</li>
+            <li>learn the basics of rxjs and observables</li>
+        </ul>
+    </div>
+    <hr>
+    <hr>
+    <h3>Project name:Weather App</h3>
+    <h3>Technology used:html,css,javascript,Expressjs,Nodejs</h3>
+    <video width="500px" height="300px" controls>
+        <source  src="./weatherapi.mp4" type="video/mp4">
+    </video>
+    <div>Learnings:
+        <ul>
+            <li>learned asyncronus programming in js.async and await,promises,callbacks.</li>
+            <li>used the weather api to get the weather details for the user inputed text.</li>
+            <li>used mustache handlebars for displaying dynamic data</li>
+            <li>nodejs used for creating cmd line apps using yargs</li>
+        </ul>
+    </div>
+    <hr>
+    <hr>
+    <h3>Project name:Pluralsight landing page</h3>
+    <h3>Technology used:html,css,javascript,Reactjs,Bootstrap5</h3>
+    <video width="500px" height="300px" controls>
+        <source  src="#" type="video/mp4">
+    </video>
+    <div>Learnings:
+        <ul>
+            <li>
+                Used the bootstrap 5.to create responsive design.mimic the online learning pluralsight homepage.
             </li>
         </ul>
-        </div>
-        <div id="education">
-        <h3>Education:</h3>
-        <ul>
-            <li>Bachelor of Engineering (2018-2022) in Mechanical Engineering from Sri Krishna College of Engineering and Technology, Coimbatore, with 8.9 CGPA</li>
-            <li>HSC (2017-2018) from Shri Ganga Higher Secondary School, Ingur,with 87.5%</li>
-            <li>SSLC (2015-2016) from Kongu Vellalar Matriculation HigherSecondary School, Perundurai, with 93.6%</li>
-        </ul>
-        </div>
-        <div id="footer">
-            <h3>My Linkedin Profile:<a href="https://www.linkedin.com/in/surya-prakash-p-05a492175?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Profile</a>
-            </h3>
-        </div>
-    </div> 
+    </div>
 </body>
 </html>
